@@ -4,6 +4,8 @@ using System.Runtime.ExceptionServices;
 using System.Security.Claims;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
+using System.Text.Json;
+using MongoDB.Driver;
 
 namespace Integrador.Controllers
 {
@@ -63,6 +65,8 @@ namespace Integrador.Controllers
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             Models.User user = new Models.User();
 
+        
+
             user.FirstName = name;
             user.UserName = userName;
             user.LastName = lastName;
@@ -73,7 +77,7 @@ namespace Integrador.Controllers
             Models.ContextMongoDB db = new Models.ContextMongoDB();
             //add the client to mongodb
             Console.WriteLine(userId);
-            db.User.UpdateOne(userId, user.ToString());
+            db.User.UpdateOne(u => u.Id == userId, Builders<Models.User>.Update.Set("FirstName", name).Set("UserName", userName).Set("LastName", lastName).Set("Email", email).Set("Password", password).Set("ConfirmPassword", confirmPassword));
             //redirect to the index page
             return RedirectToAction("Index", "Login");
         }
