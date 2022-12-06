@@ -121,7 +121,7 @@ namespace Integrador.Controllers
 ```
 # El RegisterController con los metodos update y register
 
-```using Microsoft.AspNetCore.Mvc;
+``` ```using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Plugins;
 using System.Runtime.ExceptionServices;
 using System.Security.Claims;
@@ -207,7 +207,9 @@ namespace Integrador.Controllers
 
 
     }
-} ```
+} ```# Conclusion
+
+Pese a que no tenia muchos conocimientos mas que lo que aprendimos en el semestre, esta tecnologia (asp.net.core y mongoDB) fueron bastante intuitivas y con suficiente documentacion como para aprender y buscar algunas partes con las que no contaba con conocimientos ```
 
 # En la parte de las vistas:
 La vista del registro de usuario:
@@ -356,6 +358,8 @@ La vista del registro de usuario:
 </body> ```
 
 # En la parte del la vista del login: 
+
+	
 ``` @model Integrador.Models.User
 @{
 	ViewData ["Title"] = "Login";
@@ -500,9 +504,9 @@ La vista del registro de usuario:
 </body>
 </html> ```
 
-# Conclusion
 
-Pese a que no tenia muchos conocimientos mas que lo que aprendimos en el semestre, esta tecnologia (asp.net.core y mongoDB) fueron bastante intuitivas y con suficiente documentacion como para aprender y buscar algunas partes con las que no contaba con conocimientos
+
+
 
 
 
