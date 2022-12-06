@@ -1,0 +1,62 @@
+﻿@model Integrador.Models.Service;
+
+@{
+}
+<!-- Details banner start -->
+<div class="details-banner overview-bgi">
+    <div class="container details-banner-info">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 clearfix">
+                <div class="text">
+                    <h1>Catering Service</h1>
+                    <div class="location"><i class="flaticon-pin"></i>123 Av. Heroinas. Cochabamba City,</div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<!-- Details banner end -->
+<!--view Service details -->
+<h1>Details</h1>
+
+<div>
+    <h4>SERVICE</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.serviceName)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+      
+                        
+
+
+
+
+
+

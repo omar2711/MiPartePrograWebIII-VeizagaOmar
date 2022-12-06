@@ -1,0 +1,50 @@
+﻿@model Integrador.Models.Service;
+
+@{
+}
+<!-- Details banner start -->
+<div class="details-banner overview-bgi">
+    <div class="container details-banner-info">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 clearfix">
+                <div class="text">
+                    <h1>Catering Service</h1>
+                    <div class="location"><i class="flaticon-pin"></i>123 Av. Heroinas. Cochabamba City,</div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<!-- Details banner end -->
+<!--view Service by id -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="property-details">
+                        <h3 class="heading">Service Name</h3>
+                        <p>@Model.serviceName</p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="property-details">
+                        <h3 class="heading">Features</h3>
+                        <ul class="property-features">
+                            <li><i class="flaticon-bed"></i>Description: @Model.description</li>
+                            <li><i class="flaticon-bath"></i>Description Details: @Model.descriptionDetails</li>
+                            <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i>Price: @Model.price</li>
+                            <li><i class="flaticon-car"></i>Email: @Model.email</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+                        
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+﻿@model Integrador.Models.Service;
+@{
+}
+
+
+<div class="form-control forms">
+        <form asp-action="Edit" asp-route-id="@Model.id">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="id" />
+            <div class="form-group  fform">
+                <label asp-for="serviceName" class="control-label"></label>
+                <input asp-for="serviceName" class="form-control" />
+                <span asp-validation-for="serviceName" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="description" class="control-label"></label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="descriptionDetails" class="control-label"></label>
+                <input asp-for="descriptionDetails" class="form-control" />
+                <span asp-validation-for="descriptionDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="contactService" class="control-label"></label>
+                <input asp-for="contactService" class="form-control" />
+                <span asp-validation-for="contactService" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="serviceType" class="control-label"></label>
+                <input asp-for="serviceType" class="form-control" />
+                <span asp-validation-for="serviceType" class="text-danger"></span>
+            </div>
+            <div class="form-group fform">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+    
+    
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-outline-success" />
+            </div>
+        </form>
+
+</div>

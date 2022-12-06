@@ -1,0 +1,222 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Integrador</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/animate.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap-submenu.css" asp-append-version="true">
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap-select.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/leaflet.css" type="/text/css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/map.css" type="text/css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/fonts/flaticon/font/flaticon.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/fonts/linearicons/style.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.mCustomScrollbar.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/dropzone.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/slick.css" asp-append-version="true">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="~/skins/default.css" asp-append-version="true">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" asp-append-version="true">
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="~/css/ie10-viewport-bug-workaround.css" asp-append-version="true">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="~/js/ie-emulation-modes-warning.js" asp-append-version="true"></script>
+    <script src="~/js/form.js"></script>
+	
+    <link rel="stylesheet" href="~/Integrador.styles.css" asp-append-version="true" />
+
+	
+</head>
+<body>
+    <!-- Main header start -->
+    <header class="main-header fixed-header-2">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand company-logo" href="index.html">
+                    <img src="img/logos/black-logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav header-ml">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                                Home
+                            </a>
+                        </li>
+                      
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                @*New Items*@
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Service List</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="ServiceList" asp-action="Index">Left Sidebar</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="ClientSubmitService" asp-action="Index">Submit Service</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                My Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Login" asp-action="Index">Login</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Register" asp-action="Index">Register</a></li>   
+                                <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Index">User</a></li>  
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Dashboard" asp-action="Index" >Dashboard</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Profile" asp-action="Index" asp-route-id="">My Profile</a></li>                                                              
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" asp-area="" asp-controller="Register" asp-action="Index">
+                                <i class="flaticon-logout"></i>Sign In
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class ="nav-link">
+                                @(User.Identity.Name)
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logout">
+                                Logout
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Main header end -->
+	
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="row">
+                <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-item clearfix">
+                        <img src="img/logos/logo.png" alt="logo" class="f-logo" />
+                        <ul class="contact-info">
+                            <li>
+                                <i class="flaticon-pin"></i>20/F Green Road, Dhanmondi, Dhaka
+                            </li>
+                            <li>
+                                <i class="flaticon-mail"></i><a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                            </li>
+                            <li>
+                                <i class="flaticon-phone"></i><a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                            </li>
+                            <li><i class="flaticon-fax"></i>+0477 85X6 552</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="social-list-2">
+                            <ul>
+                                <li>
+                                    <a href="#" class="facebook-bg">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="twitter-bg">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="google-bg">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="linkedin-bg">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12">
+                    <p class="copy sub-footer">
+                        © 2019 <a href="#">Theme Vessel.</a> Trademarks and brands are the
+                        property of their respective owners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+	
+
+	<!-- Page scripts
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    -->
+	
+    <script src="~/js/jquery-2.2.0.min.js" asp-append-version="true"></script>
+    <script src="~/js/popper.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap-submenu.js" asp-append-version="true"></script>
+    <script src="~/js/rangeslider.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.mb.YTPlayer.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap-select.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.easing.1.3.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.scrollUp.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js" asp-append-version="true"></script>
+    <script src="~/js/leaflet.js" asp-append-version="true"></script>
+    <script src="~/js/leaflet-providers.js" asp-append-version="true"></script>
+    <script src="~/js/leaflet.markercluster.js" asp-append-version="true"></script>
+    <script src="~/js/dropzone.js" asp-append-version="true"></script>
+    <script src="~/js/slick.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.filterizr.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.countdown.js" asp-append-version="true"></script>
+    <script src="~/js/maps.js" asp-append-version="true"></script>
+    <script src="~/js/app.js" asp-append-version="true"></script>
+    <script src="~/js/form.js" asp-append-version="true"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="~/js/ie10-viewport-bug-workaround.js" asp-append-version="true"></script>
+    <!-- Custom javascript -->
+    <script src="~/js/ie10-viewport-bug-workaround.js" asp-append-version="true"></script>
+
+	
+	
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

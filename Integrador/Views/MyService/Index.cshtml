@@ -1,0 +1,52 @@
+﻿@model  IEnumerable<Integrador.Models.Service>
+
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "My Service";
+}
+<div class="dashboard-header clearfix">
+    <div class="row">
+        <div class="col-sm-12 col-md-6"><h4>My Service</h4></div>
+        <div class="col-sm-12 col-md-6">
+            <div class="breadcrumb-nav">
+                <ul>
+                    <li>
+                        <a href="index">Index</a>
+                    </li>
+                    <li>
+                        <a href="dashboard">Dashboard</a>
+                    </li>
+                    <li class="active">My Service</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dashboard-list">
+    <h3>My Service List</h3>
+    <table class="manage-table">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="responsive-table">
+                    <td class="listing-photoo">
+                        <img src="img/properties/properties-2.png" alt="listing-photo" class="img-fluid">
+                    </td>
+                    <td class="title-container">
+                        <h2><a href="ServiceDetails/Index">@Html.DisplayFor(modelItem => item.serviceName)</a></h2>
+                        <h5 class="d-none d-xl-block d-lg-block d-md-block"><i class="flaticon-mail"></i> @Html.DisplayFor(modelItem => item.email) </h5>
+                        <h6 class="table-property-price"><i class="flaticon-plus"></i>@Html.DisplayFor(modelItem => item.serviceType)</h6>
+                    </td>
+                    <td class="expire-date">4.01.2018</td>
+                    <td class="action">
+                        <a asp-action="Edit" asp-route-id="@item.id"><i class="fa fa-pencil"></i>Edit</a>
+                        <a  asp-action="Details" asp-route-id="@item.id"><i class="fa  fa-eye-slash"></i> Hide</a>
+                        <a asp-action="Delete" asp-route-id="@item.id"><i class="fa fa-remove"></i> Delete</a>
+                    </td>
+                </tr>
+            }
+                
+            
+        </tbody>
+    </table>
+</div>

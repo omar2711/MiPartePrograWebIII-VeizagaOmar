@@ -1,0 +1,143 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Integrador</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/animate.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap-submenu.css" asp-append-version="true">
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap-select.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/leaflet.css" type="/text/css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/map.css" type="text/css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/fonts/flaticon/font/flaticon.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/fonts/linearicons/style.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.mCustomScrollbar.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/dropzone.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/slick.css" asp-append-version="true">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="~/skins/default.css" asp-append-version="true">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" asp-append-version="true">
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="~/css/ie10-viewport-bug-workaround.css" asp-append-version="true">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="~/js/ie-emulation-modes-warning.js" asp-append-version="true"></script>
+
+    <link rel="stylesheet" href="~/Integrador.styles.css" asp-append-version="true" />
+
+
+</head>
+<body>
+    <!-- Contact section start -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Form content box start -->
+                    <div class="form-content-box">
+                        <!-- details -->
+                        <div class="details">
+                            <!-- Logo-->
+                            <a href="index.html">
+                                <img src="img/black-logo.png" class="cm-logo" alt="black-logo">
+                            </a>
+                            <!-- Name -->
+                            <h3>Create an account</h3>
+                            
+                            <!-- Form start-->
+                            <form action="Register/RegisterClient" method="post">
+                                <div class="form-group">
+                                    <input type="text" name="firstname" class="input-text" placeholder="First Name" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="lastName" class="input-text" placeholder="Last Name" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="userName" class="input-text" placeholder="User Name" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="input-text" placeholder="Email Address" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" class="input-text" placeholder="Password" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="confirmPassword" class="input-text" placeholder="Confirm Password" autofocus required>
+                                </div>
+                                
+                                <div class="form-group mb-0">
+                                    <button type="submit" class="btn-md button-theme btn-block">Signup</button>
+                                </div>
+                            </form>
+                            <!-- Social List -->
+                            <ul class="social-list clearfix">
+                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer -->
+                        <div class="footer">
+                            <span>Already a member? <a asp-controller="Login" asp-action="Index">Login here</a></span>
+                        </div>
+                    </div>
+                    <!-- Form content box end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact section end -->
+
+    <script src="~/js/jquery-2.2.0.min.js" asp-append-version="true"></script>
+    <script src="~/js/popper.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap-submenu.js" asp-append-version="true"></script>
+    <script src="~/js/rangeslider.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.mb.YTPlayer.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap-select.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.easing.1.3.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.scrollUp.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js" asp-append-version="true"></script>
+    <script src="~/js/leaflet.js" asp-append-version="true"></script>
+    <script src="~/js/leaflet-providers.js" asp-append-version="true"></script>
+    <script src="~/js/leaflet.markercluster.js" asp-append-version="true"></script>
+    <script src="~/js/dropzone.js" asp-append-version="true"></script>
+    <script src="~/js/slick.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.filterizr.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.countdown.js" asp-append-version="true"></script>
+    <script src="~/js/maps.js" asp-append-version="true"></script>
+    <script src="~/js/app.js" asp-append-version="true"></script>
+    <script src="~/js/collapse.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="~/js/ie10-viewport-bug-workaround.js" asp-append-version="true"></script>
+    <!-- Custom javascript -->
+    <script src="~/js/ie10-viewport-bug-workaround.js" asp-append-version="true"></script>
+
+</body>
+</html>
